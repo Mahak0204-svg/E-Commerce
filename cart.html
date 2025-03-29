@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Fashora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Fashora</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" class="active">Cart (<span id="cart-count-header">0</span>)</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: url('./images/cart.png');">
+        <div class="container">
+            <h2>Your Shopping Cart</h2>
+        </div>
+    </section>
+
+    <section class="cart-items">
+        <div class="container">
+            <div class="cart-table">
+                <div class="cart-header-row">
+                    <div class="cart-header">Product</div>
+                    <div class="cart-header">Price</div>
+                    <div class="cart-header">Quantity</div>
+                    <div class="cart-header">Total</div>
+                    <div class="cart-header">Remove</div>
+                </div>
+                <ul id="cart-list">
+                    </ul>
+            </div>
+            <div class="cart-summary">
+                <p class="total"><strong>Total: ₹<span id="total-price">0</span></strong></p>
+                <div class="cart-actions">
+                    <button onclick="clearCart()" class="btn secondary-btn">Clear Cart</button>
+                    <button class="btn primary-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Fashora | Follow us on
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        displayCart();
+        updateCartCountHeader();
+    </script>
+</body>
+</html>

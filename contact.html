@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fashora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Fashora</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count-header">0</span>)</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: url('./images/contact\ us.png');">
+        <div class="container">
+            <h2>Contact Us</h2>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-details">
+                <h3>Get in Touch</h3>
+                <p>We'd love to hear from you! Please feel free to reach out with any questions, feedback, or concerns.</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:support@fashora.com">support@fashora.com</a></li>
+                    <li><strong>Phone:</strong> +91 [Your Phone Number] (Gwalior, Madhya Pradesh)</li>
+                    <li><strong>Address:</strong> [Your Business Address], Gwalior, Madhya Pradesh, India</li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button class="btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Fashora | Follow us on
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        updateCartCountHeader();
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashora - Best Deals Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Fashora</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count-header">0</span>)</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero"></section>
+
+    <section class="featured">
+        <div class="container">
+            <section class="categories">
+                <div class="container">
+                    <h2>Shop by Category</h2>
+                <div class="category-list">
+                <a href="products.html?category=electronics" class="category electronics">
+                    <h3>Electronics</h3>
+                </a>
+                <a href="products.html?category=fashion" class="category fashion">
+                    <h3>Fashion</h3>
+                </a>
+                <a href="products.html?category=home" class="category home">
+                    <h3>Home & Living</h3>
+                </a>
+                </div>
+                </div>
+            </section>
+
+            <h2> Top Deals </h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="./images/smartwatch.jpg" alt="Smartwatch">
+                    <h3>Smartwatch</h3>
+                    <p>₹1999</p>
+                    <button class="add-to-cart-btn" data-name="Smartwatch" data-price="1999">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./images/headphone.jpg" alt="Wireless Headphones">
+                    <h3>Wireless Headphones</h3>
+                    <p>₹1299</p>
+                    <button class="add-to-cart-btn" data-name="Wireless Headphones" data-price="1299">Add to Cart</button>
+                </div>
+                </div>      
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>📩 Stay Updated with Offers</h2>
+            <p>Subscribe to our newsletter for exclusive discounts!</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Fashora | Follow us on
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

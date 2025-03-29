@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Fashora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Fashora</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count-header">0</span>)</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: url('./images/product.png');">
+        <div class="container">
+            <h2><b>Our Products</b></h2>
+        </div>
+    </section>
+
+    <section class="products-grid">
+        <div class="container">
+            <div class="filters">
+                <input type="text" id="search" placeholder="Search products">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="fashion">Fashion</option>
+                </select>
+                <div class="filter-group">
+                    <label for="priceFilter"></label>
+                    <input type="number" id="priceFilter" placeholder="Max Price">
+                </div>
+    
+                <button onclick="filterProducts()">Filter</button>
+            </div>
+            <div class="product-list">
+                <div class="product" data-name="Stylish Dress" data-price="799" data-category="fashion">
+                    <img src="https://th.bing.com/th/id/OIP.VUVYEbc9VI-xtJfB91ZpHAAAAA?rs=1&pid=ImgDetMain" alt="Stylish Dress">
+                    <h3>Stylish Dress</h3>
+                    <p>₹799</p>
+                    <button class="add-to-cart-btn" data-name="Stylish Dress" data-price="799">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Trendy Top" data-price="499" data-category="fashion">
+                    <img src="https://th.bing.com/th/id/OIP.Jb4yefXZKmJbnCWLBGGfDQAAAA?rs=1&pid=ImgDetMain" alt="Trendy Top">
+                    <h3>Trendy Top</h3>
+                    <p>₹499</p>
+                    <button class="add-to-cart-btn" data-name="Trendy Top" data-price="499">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Comfortable Jeans" data-price="999" data-category="fashion">
+                    <img src="https://i.pinimg.com/originals/3a/8b/b9/3a8bb98c83dc13ecd07aca8992973713.jpg" alt="Comfortable Jeans">
+                    <h3>Comfortable Jeans</h3>
+                    <p>₹999</p>
+                    <button class="add-to-cart-btn" data-name="Comfortable Jeans" data-price="999">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Elegant Skirt" data-price="699" data-category="fashion">
+                    <img src="https://th.bing.com/th/id/OIP.Fls8oPAJLBOS-MYNHh12rwHaHa?rs=1&pid=ImgDetMain" alt="Elegant Skirt">
+                    <h3>Elegant Skirt</h3>
+                    <p>₹699</p>
+                    <button class="add-to-cart-btn" data-name="Elegant Skirt" data-price="699">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Casual T-Shirt" data-price="399" data-category="fashion">
+                    <img src="https://i.pinimg.com/736x/c2/22/f6/c222f66be82a4f1adfbb3dee180c5317.jpg" alt="Casual T-Shirt">
+                    <h3>Casual T-Shirt</h3>
+                    <p>₹399</p>
+                    <button class="add-to-cart-btn" data-name="Casual T-Shirt" data-price="399">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Fashionable Jacket" data-price="1299" data-category="fashion">
+                    <img src="https://i.pinimg.com/originals/ba/54/38/ba5438de49681c5a177e7e55532d08cd.jpg" alt="Fashionable Jacket">
+                    <h3>Fashionable Jacket</h3>
+                    <p>₹1299</p>
+                    <button class="add-to-cart-btn" data-name="Fashionable Jacket" data-price="1299">Add to Cart</button>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Fashora | Follow us on
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Basic filtering on page load based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('category');
+        if (categoryParam) {
+            document.getElementById('categoryFilter').value = categoryParam;
+            filterProducts();
+        }
+        // Initialize cart count on page load
+        updateCartCountHeader();
+    </script>
+</body>
+</html>
